@@ -1,5 +1,6 @@
 #+TITLE: Матан. Подготвка к экзамену.
-
+#+latex_header: \usepackage[utf8x]{inputenc}
+#+latex_header: \usepackage[T2A]{fontenc}
 * Даты
 ** Консультация 
 /2021-06-24 Thu/
@@ -11,11 +12,11 @@
 
 *** Опр. 1. 
 Функция /F/ называется первообразной функции /f/ на промежутке \Delta , если /F/ дифференцируема на \Delta и в каждой точке /x/ \in \Delta
-
+$$
 \begin{eqnarray}
- &F'(x)&=&f(x)&
+ F'(x)=f(x)
 \end{eqnarray}
-
+$$
 Очевидно, что первообразная /F(x)/ непрерывна на \Delta.
 
 *** Опр. 2.  
