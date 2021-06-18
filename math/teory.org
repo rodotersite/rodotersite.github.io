@@ -28,7 +28,7 @@
 Если /F(x)/ — какая-либо первообразная функции /f(x)/ на /Delta, то пишут
 
 \begin{eqnarray}
-$$\int&f(x)&dx=&F(x)&+C$$
+\int f(x)dx=F(x)+C
 \end{eqnarray}
 
 /C/ — произвольная постоянная.
