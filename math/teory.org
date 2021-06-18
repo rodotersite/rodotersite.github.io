@@ -1,7 +1,7 @@
 #+TITLE: Матан. Подготвка к экзамену.
 #+latex_header: \usepackage[utf8x]{inputenc}
 #+latex_header: \usepackage[T2A]{fontenc}
-#+latex_header: \usepackage[svgnames]{xcolor}
+#+latex_header: \usepackage[colorlinks=true, linkcolor=Maroon, urlcolor=Maroon]{hyperref}
 * Даты
 ** Консультация 
 /2021-06-24 Thu/
