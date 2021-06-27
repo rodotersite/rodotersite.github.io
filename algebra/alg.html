@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-27 Sun 16:57 -->
+<!-- 2021-06-28 Mon 00:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Алгебра. Подготвка к экзамену.</title>
@@ -215,6 +215,28 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -223,369 +245,279 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0800d25">1. «Алгебра, часть II»</a>
+<li><a href="#org2d9fce8">1. <span class="done DONE">DONE</span> 1</a>
 <ul>
-<li><a href="#orgca3c815">1.1. 1.Кольцо многочленов R[x] над областью целостности R. Теорема Безу. Теорема о числе корней многочлена. Формулы Виета.</a></li>
-<li><a href="#org44ac5a3">1.2. 2. Алгебраическое и функциональное равенство многочленов. Интерполяционная формула Лагранжа.</a></li>
-<li><a href="#orgf96c8e1">1.3. 3. Кольцо многочленов F[x] над полем F. Деление с остатком. Наибольший общий делитель многочленов.</a></li>
-<li><a href="#org2f201a6">1.4. 4. Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</a></li>
-<li><a href="#orgf8e345c">1.5. 2. Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</a></li>
-<li><a href="#orgb3ccff8">1.6. 3. Неприводимые многочлены над полем. Теорема о факторизации.</a></li>
-<li><a href="#orgcfa14f2">1.7. 4. Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</a></li>
-<li><a href="#org3cbd657">1.8. 5. Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</a></li>
-<li><a href="#org677f6be">1.9. 9. Линейная зависимость векторов. Базис и ранг конечной системы векторов.</a></li>
-<li><a href="#org5011d5c">1.10. 10. Базис векторного пространства. Конечномерные векторные пространства.</a></li>
-<li><a href="#org33f8104">1.11. 11. Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</a></li>
-<li><a href="#orge8554d3">1.12. 12. Линейная оболочка системы векторов. Суммы подпространств.</a></li>
-<li><a href="#org473aa3c">1.13. 13. Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</a></li>
-<li><a href="#org2de00c4">1.14. 14. Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</a></li>
-<li><a href="#orgc5fd0d3">1.15. 15. Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</a></li>
-<li><a href="#orgd2a786f">1.16. 16. Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</a></li>
-<li><a href="#org4eb8bda">1.17. 17. Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</a></li>
-<li><a href="#org038c002">1.18. 18. Ядро и образ линейного отображения. Невырожденные линейные операторы.</a></li>
-<li><a href="#org1d375f2">1.19. 19. Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</a></li>
-<li><a href="#org29d2e7a">1.20. 20. Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</a></li>
-<li><a href="#org02f0df2">1.21. 21. Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</a></li>
-<li><a href="#orge581eff">1.22. <span class="todo TODO">TODO</span> 22. Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</a></li>
+<li><a href="#org8ffba44">1.1. <span class="done DONE">DONE</span> Кольцо многочленов R[x] над областью целостности R.</a></li>
+<li><a href="#orgccf92c4">1.2. <span class="done DONE">DONE</span> Теорема безу.</a></li>
+<li><a href="#orgaf58b12">1.3. <span class="done DONE">DONE</span> Теорема о числе корней многочлена.</a></li>
+<li><a href="#orgfffa396">1.4. <span class="done DONE">DONE</span> Формулы Виета.</a></li>
 </ul>
 </li>
-<li><a href="#org39af40f">2. «Алгебра, часть II»</a>
+<li><a href="#orgfcfe580">2. <span class="done DONE">DONE</span> 2</a>
 <ul>
-<li><a href="#orga7b979a">2.1. 1</a>
-<ul>
-<li><a href="#orgc95d335">2.1.1. Кольцо многочленов R[x] над областью целостности R.</a></li>
-<li><a href="#org1287615">2.1.2. Теорема Безу.</a></li>
-<li><a href="#org74840ad">2.1.3. Теорема о числе корней многочлена.</a></li>
-<li><a href="#orgec1850b">2.1.4. Формулы Виета.</a></li>
+<li><a href="#orge6c1988">2.1. <span class="done DONE">DONE</span> Алгебраическое и функциональное равенство многочленов.</a></li>
+<li><a href="#org3f8d281">2.2. <span class="done DONE">DONE</span> Интерполяционная формула Лагранжа.</a></li>
 </ul>
 </li>
-<li><a href="#org44113e5">2.2. Алгебраическое и функциональное равенство многочленов. Интерполяционная формула Лагранжа.</a></li>
-<li><a href="#orgdff6e1a">2.3. Кольцо многочленов F[x] над полем F. Деление с остатком. Наибольший общий делитель многочленов.</a></li>
-<li><a href="#orga9757ec">2.4. Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</a></li>
-<li><a href="#org276611b">2.5. Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</a></li>
-<li><a href="#orgbeeb3b7">2.6. Неприводимые многочлены над полем. Теорема о факторизации.</a></li>
-<li><a href="#orgd2ccd9b">2.7. Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</a></li>
-<li><a href="#org8f1d37d">2.8. Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</a></li>
-<li><a href="#orga872920">2.9. Линейная зависимость векторов. Базис и ранг конечной системы векторов.</a></li>
-<li><a href="#org174f55c">2.10. Базис векторного пространства. Конечномерные векторные пространства.</a></li>
-<li><a href="#org66a3884">2.11. Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</a></li>
-<li><a href="#orgf598858">2.12. Линейная оболочка системы векторов. Суммы подпространств.</a></li>
-<li><a href="#org9cdce6b">2.13. Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</a></li>
-<li><a href="#orgf2fd4f3">2.14. Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</a></li>
-<li><a href="#orgdc17066">2.15. Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</a></li>
-<li><a href="#orgf1ca507">2.16. Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</a></li>
-<li><a href="#orgc63dfc0">2.17. Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</a></li>
-<li><a href="#org4d9e86c">2.18. Ядро и образ линейного отображения. Невырожденные линейные операторы.</a></li>
-<li><a href="#orgaa00394">2.19. Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</a></li>
-<li><a href="#org95fad1a">2.20. Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</a></li>
-<li><a href="#org04e0283">2.21. Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</a></li>
-<li><a href="#orgc771b50">2.22. Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</a></li>
+<li><a href="#org6db8043">3. <span class="done DONE">DONE</span> 3</a>
+<ul>
+<li><a href="#org7e7abfb">3.1. <span class="done DONE">DONE</span> Кольцо многочленов F[x] над полем F.</a></li>
+<li><a href="#orgaf5b4ae">3.2. <span class="done DONE">DONE</span> Деление с остатком.</a></li>
+<li><a href="#org5034f73">3.3. <span class="done DONE">DONE</span> Наибольший общий делитель многочленов.</a></li>
 </ul>
 </li>
+<li><a href="#org5875cf1">4. Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</a></li>
+<li><a href="#orgb79d5fb">5. Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</a></li>
+<li><a href="#org581b45c">6. Неприводимые многочлены над полем. Теорема о факторизации.</a></li>
+<li><a href="#orgff20362">7. Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</a></li>
+<li><a href="#orga956c71">8. Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</a></li>
+<li><a href="#orgd65f26d">9. Линейная зависимость векторов. Базис и ранг конечной системы векторов.</a></li>
+<li><a href="#orgc2ddcea">10. Базис векторного пространства. Конечномерные векторные пространства.</a></li>
+<li><a href="#org38c50b7">11. Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</a></li>
+<li><a href="#orgeba28a1">12. Линейная оболочка системы векторов. Суммы подпространств.</a></li>
+<li><a href="#org2bd9615">13. Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</a></li>
+<li><a href="#orge4bb556">14. Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</a></li>
+<li><a href="#org9aaf44d">15. Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</a></li>
+<li><a href="#org7ab65e5">16. Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</a></li>
+<li><a href="#org8824a55">17. Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</a></li>
+<li><a href="#orgc60b673">18. Ядро и образ линейного отображения. Невырожденные линейные операторы.</a></li>
+<li><a href="#org63811fb">19. Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</a></li>
+<li><a href="#orgc69aa03">20. Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</a></li>
+<li><a href="#org2b99a79">21. Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</a></li>
+<li><a href="#org2906aec">22. Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0800d25" class="outline-2">
-<h2 id="org0800d25"><span class="section-number-2">1</span> «Алгебра, часть II»</h2>
+<div id="outline-container-org2d9fce8" class="outline-2">
+<h2 id="org2d9fce8"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> 1</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgca3c815" class="outline-3">
-<h3 id="orgca3c815"><span class="section-number-3">1.1</span> 1.Кольцо многочленов R[x] над областью целостности R. Теорема Безу. Теорема о числе корней многочлена. Формулы Виета.</h3>
+<div id="outline-container-org8ffba44" class="outline-3">
+<h3 id="org8ffba44"><span class="section-number-3">1.1</span> <span class="done DONE">DONE</span> Кольцо многочленов R[x] над областью целостности R.</h3>
 <div class="outline-text-3" id="text-1-1">
-<a href="file:pdf/1_1.pdf">Кольцо многочленов R[x] над областью целостности R.</a>
+<p>
+<a href="https://www.youtube.com/watch?v=b2D1FZb6fpw">Кольцо многочленов</a>
+</p>
 
-<a href="file:pdf/1_2.pdf">3.pdf</a>
+<p>
+Кольцо \(K\) - это множество "чисел", с которыми всегда по обычным правилам выполнимы \(+,-,*\)
+(Деление может быть выпонимо не всегда)
+</p>
+
+
+<div id="orgd96ab2b" class="figure">
+<p><img src="png/1-K-M-o2.png" alt="1-K-M-o2.png" />
+</p>
+</div>
+
+<p>
+<a href="https://www.youtube.com/watch?v=jXe7Gaf77do">Многочлены над кольцами вычетов</a>
+</p>
+
+
+<div id="orgadf769e" class="figure">
+<p><img src="png/1-K-M-o1.png" alt="1-K-M-o1.png" />
+</p>
+</div>
+
+
+<div id="org9762aad" class="figure">
+<p><img src="png/1-K-M-t1.png" alt="1-K-M-t1.png" />
+</p>
 </div>
 </div>
-
-<div id="outline-container-org44ac5a3" class="outline-3">
-<h3 id="org44ac5a3"><span class="section-number-3">1.2</span> 2. Алгебраическое и функциональное равенство многочленов. Интерполяционная формула Лагранжа.</h3>
+</div>
+<div id="outline-container-orgccf92c4" class="outline-3">
+<h3 id="orgccf92c4"><span class="section-number-3">1.2</span> <span class="done DONE">DONE</span> Теорема безу.</h3>
 <div class="outline-text-3" id="text-1-2">
-<a href="file:pdf/2_1.pdf">3.pdf</a>
+<p>
+<a href="https://www.youtube.com/watch?v=pUHY3zCVenY">теорема Безу Доказательство и примеры</a>
+</p>
 
-<a href="file:pdf/2_2.pdf">3.pdf</a>
+
+<div id="orgf7e6e42" class="figure">
+<p><img src="png/1-T-B-t1.png" alt="1-T-B-t1.png" />
+</p>
 </div>
 </div>
-
-<div id="outline-container-orgf96c8e1" class="outline-3">
-<h3 id="orgf96c8e1"><span class="section-number-3">1.3</span> 3. Кольцо многочленов F[x] над полем F. Деление с остатком. Наибольший общий делитель многочленов.</h3>
+</div>
+<div id="outline-container-orgaf58b12" class="outline-3">
+<h3 id="orgaf58b12"><span class="section-number-3">1.3</span> <span class="done DONE">DONE</span> Теорема о числе корней многочлена.</h3>
 <div class="outline-text-3" id="text-1-3">
-<a href="file:pdf/3_1.pdf">3.pdf</a>
 
-<a href="file:pdf/3_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org2f201a6" class="outline-3">
-<h3 id="org2f201a6"><span class="section-number-3">1.4</span> 4. Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</h3>
-<div class="outline-text-3" id="text-1-4">
-<a href="file:pdf/4_1.pdf">3.pdf</a>
-
-<a href="file:pdf/4_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orgf8e345c" class="outline-3">
-<h3 id="orgf8e345c"><span class="section-number-3">1.5</span> 2. Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</h3>
-<div class="outline-text-3" id="text-1-5">
-<a href="file:pdf/5_1.pdf">3.pdf</a>
-
-<a href="file:pdf/5_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orgb3ccff8" class="outline-3">
-<h3 id="orgb3ccff8"><span class="section-number-3">1.6</span> 3. Неприводимые многочлены над полем. Теорема о факторизации.</h3>
-<div class="outline-text-3" id="text-1-6">
-<a href="file:pdf/6_1.pdf">3.pdf</a>
-
-<a href="file:pdf/6_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orgcfa14f2" class="outline-3">
-<h3 id="orgcfa14f2"><span class="section-number-3">1.7</span> 4. Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</h3>
-<div class="outline-text-3" id="text-1-7">
-<a href="file:pdf/7_1.pdf">3.pdf</a>
-
-<a href="file:pdf/7_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org3cbd657" class="outline-3">
-<h3 id="org3cbd657"><span class="section-number-3">1.8</span> 5. Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</h3>
-<div class="outline-text-3" id="text-1-8">
-<a href="file:pdf/8_1.pdf">3.pdf</a>
-
-<a href="file:pdf/8_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org677f6be" class="outline-3">
-<h3 id="org677f6be"><span class="section-number-3">1.9</span> 9. Линейная зависимость векторов. Базис и ранг конечной системы векторов.</h3>
-<div class="outline-text-3" id="text-1-9">
-<a href="file:pdf/9_1.pdf">3.pdf</a>
-
-<a href="file:pdf/9_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org5011d5c" class="outline-3">
-<h3 id="org5011d5c"><span class="section-number-3">1.10</span> 10. Базис векторного пространства. Конечномерные векторные пространства.</h3>
-<div class="outline-text-3" id="text-1-10">
-<a href="file:pdf/10_1.pdf">3.pdf</a>
-
-<a href="file:pdf/10_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org33f8104" class="outline-3">
-<h3 id="org33f8104"><span class="section-number-3">1.11</span> 11. Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</h3>
-<div class="outline-text-3" id="text-1-11">
-<a href="file:pdf/11_1.pdf">3.pdf</a>
-
-<a href="file:pdf/11_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orge8554d3" class="outline-3">
-<h3 id="orge8554d3"><span class="section-number-3">1.12</span> 12. Линейная оболочка системы векторов. Суммы подпространств.</h3>
-<div class="outline-text-3" id="text-1-12">
-<a href="file:pdf/12_1.pdf">3.pdf</a>
-
-<a href="file:pdf/12_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org473aa3c" class="outline-3">
-<h3 id="org473aa3c"><span class="section-number-3">1.13</span> 13. Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</h3>
-<div class="outline-text-3" id="text-1-13">
-<a href="file:pdf/13_1.pdf">3.pdf</a>
-
-<a href="file:pdf/13_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org2de00c4" class="outline-3">
-<h3 id="org2de00c4"><span class="section-number-3">1.14</span> 14. Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</h3>
-<div class="outline-text-3" id="text-1-14">
-<a href="file:pdf/14_1.pdf">3.pdf</a>
-
-<a href="file:pdf/14_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orgc5fd0d3" class="outline-3">
-<h3 id="orgc5fd0d3"><span class="section-number-3">1.15</span> 15. Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</h3>
-<div class="outline-text-3" id="text-1-15">
-<a href="file:pdf/15_1.pdf">3.pdf</a>
-
-<a href="file:pdf/15_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orgd2a786f" class="outline-3">
-<h3 id="orgd2a786f"><span class="section-number-3">1.16</span> 16. Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</h3>
-<div class="outline-text-3" id="text-1-16">
-<a href="file:pdf/16_1.pdf">3.pdf</a>
-
-<a href="file:pdf/16_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org4eb8bda" class="outline-3">
-<h3 id="org4eb8bda"><span class="section-number-3">1.17</span> 17. Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</h3>
-<div class="outline-text-3" id="text-1-17">
-<a href="file:pdf/17_1.pdf">3.pdf</a>
-
-<a href="file:pdf/17_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org038c002" class="outline-3">
-<h3 id="org038c002"><span class="section-number-3">1.18</span> 18. Ядро и образ линейного отображения. Невырожденные линейные операторы.</h3>
-<div class="outline-text-3" id="text-1-18">
-<a href="file:pdf/18_1.pdf">3.pdf</a>
-
-<a href="file:pdf/18_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org1d375f2" class="outline-3">
-<h3 id="org1d375f2"><span class="section-number-3">1.19</span> 19. Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</h3>
-<div class="outline-text-3" id="text-1-19">
-<a href="file:pdf/19_1.pdf">3.pdf</a>
-
-<a href="file:pdf/19_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org29d2e7a" class="outline-3">
-<h3 id="org29d2e7a"><span class="section-number-3">1.20</span> 20. Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</h3>
-<div class="outline-text-3" id="text-1-20">
-<a href="file:pdf/20_1.pdf">3.pdf</a>
-
-<a href="file:pdf/20_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-org02f0df2" class="outline-3">
-<h3 id="org02f0df2"><span class="section-number-3">1.21</span> 21. Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</h3>
-<div class="outline-text-3" id="text-1-21">
-<a href="file:pdf/21_1.pdf">3.pdf</a>
-
-<a href="file:pdf/21_2.pdf">3.pdf</a>
-</div>
-</div>
-
-<div id="outline-container-orge581eff" class="outline-3">
-<h3 id="orge581eff"><span class="section-number-3">1.22</span> <span class="todo TODO">TODO</span> 22. Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</h3>
-</div>
-</div>
-<div id="outline-container-org39af40f" class="outline-2">
-<h2 id="org39af40f"><span class="section-number-2">2</span> «Алгебра, часть II»</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orga7b979a" class="outline-3">
-<h3 id="orga7b979a"><span class="section-number-3">2.1</span> 1</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
-<div id="outline-container-orgc95d335" class="outline-4">
-<h4 id="orgc95d335"><span class="section-number-4">2.1.1</span> Кольцо многочленов R[x] над областью целостности R.</h4>
-</div>
-
-<div id="outline-container-org1287615" class="outline-4">
-<h4 id="org1287615"><span class="section-number-4">2.1.2</span> Теорема Безу.</h4>
-</div>
-<div id="outline-container-org74840ad" class="outline-4">
-<h4 id="org74840ad"><span class="section-number-4">2.1.3</span> Теорема о числе корней многочлена.</h4>
-<div class="outline-text-4" id="text-2-1-3">
-
-<div id="org78f527d" class="figure">
+<div id="orgb72005c" class="figure">
 <p><img src="png/1-T-CH-K-M-o1.png" alt="1-T-CH-K-M-o1.png" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-orgec1850b" class="outline-4">
-<h4 id="orgec1850b"><span class="section-number-4">2.1.4</span> Формулы Виета.</h4>
-<div class="outline-text-4" id="text-2-1-4">
+
 <p>
-Формулы Виета — формулы, связывающие коэффициенты многочлена и его корни.
+Теорема о числе корней многочленов
+</p>
+
+
+<div id="orgc2d5258" class="figure">
+<p><img src="png/1-T-CH-K-M-t1.png" alt="1-T-CH-K-M-t1.png" />
 </p>
 </div>
 </div>
 </div>
+<div id="outline-container-orgfffa396" class="outline-3">
+<h3 id="orgfffa396"><span class="section-number-3">1.4</span> <span class="done DONE">DONE</span> Формулы Виета.</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Формулы Виета — формулы, связывающие коэффициенты многочлена и его корни.
+</p>
 
-<div id="outline-container-org44113e5" class="outline-3">
-<h3 id="org44113e5"><span class="section-number-3">2.2</span> Алгебраическое и функциональное равенство многочленов. Интерполяционная формула Лагранжа.</h3>
+
+<div id="org61e63b1" class="figure">
+<p><img src="png/1-F-V.png" alt="1-F-V.png" />
+</p>
 </div>
-<div id="outline-container-orgdff6e1a" class="outline-3">
-<h3 id="orgdff6e1a"><span class="section-number-3">2.3</span> Кольцо многочленов F[x] над полем F. Деление с остатком. Наибольший общий делитель многочленов.</h3>
 </div>
-<div id="outline-container-orga9757ec" class="outline-3">
-<h3 id="orga9757ec"><span class="section-number-3">2.4</span> Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</h3>
 </div>
-<div id="outline-container-org276611b" class="outline-3">
-<h3 id="org276611b"><span class="section-number-3">2.5</span> Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</h3>
 </div>
-<div id="outline-container-orgbeeb3b7" class="outline-3">
-<h3 id="orgbeeb3b7"><span class="section-number-3">2.6</span> Неприводимые многочлены над полем. Теорема о факторизации.</h3>
+
+<div id="outline-container-orgfcfe580" class="outline-2">
+<h2 id="orgfcfe580"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> 2</h2>
+<div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgd2ccd9b" class="outline-3">
-<h3 id="orgd2ccd9b"><span class="section-number-3">2.7</span> Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</h3>
+
+<div id="outline-container-orge6c1988" class="outline-3">
+<h3 id="orge6c1988"><span class="section-number-3">2.1</span> <span class="done DONE">DONE</span> Алгебраическое и функциональное равенство многочленов.</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<div id="org70323ea" class="figure">
+<p><img src="png/2-A-F-R-M.png" alt="2-A-F-R-M.png" />
+</p>
 </div>
-<div id="outline-container-org8f1d37d" class="outline-3">
-<h3 id="org8f1d37d"><span class="section-number-3">2.8</span> Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</h3>
 </div>
-<div id="outline-container-orga872920" class="outline-3">
-<h3 id="orga872920"><span class="section-number-3">2.9</span> Линейная зависимость векторов. Базис и ранг конечной системы векторов.</h3>
 </div>
-<div id="outline-container-org174f55c" class="outline-3">
-<h3 id="org174f55c"><span class="section-number-3">2.10</span> Базис векторного пространства. Конечномерные векторные пространства.</h3>
+<div id="outline-container-org3f8d281" class="outline-3">
+<h3 id="org3f8d281"><span class="section-number-3">2.2</span> <span class="done DONE">DONE</span> Интерполяционная формула Лагранжа.</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<div id="orgbd926fc" class="figure">
+<p><img src="png/2-I-F-L-f1.png" alt="2-I-F-L-f1.png" />    
+</p>
 </div>
-<div id="outline-container-org66a3884" class="outline-3">
-<h3 id="org66a3884"><span class="section-number-3">2.11</span> Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</h3>
+
+
+<div id="org8fad69d" class="figure">
+<p><img src="png/2-I-F-L-t1.png" alt="2-I-F-L-t1.png" />    
+</p>
 </div>
-<div id="outline-container-orgf598858" class="outline-3">
-<h3 id="orgf598858"><span class="section-number-3">2.12</span> Линейная оболочка системы векторов. Суммы подпространств.</h3>
 </div>
-<div id="outline-container-org9cdce6b" class="outline-3">
-<h3 id="org9cdce6b"><span class="section-number-3">2.13</span> Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</h3>
 </div>
-<div id="outline-container-orgf2fd4f3" class="outline-3">
-<h3 id="orgf2fd4f3"><span class="section-number-3">2.14</span> Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</h3>
 </div>
-<div id="outline-container-orgdc17066" class="outline-3">
-<h3 id="orgdc17066"><span class="section-number-3">2.15</span> Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</h3>
+<div id="outline-container-org6db8043" class="outline-2">
+<h2 id="org6db8043"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> 3</h2>
+<div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgf1ca507" class="outline-3">
-<h3 id="orgf1ca507"><span class="section-number-3">2.16</span> Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</h3>
+<div id="outline-container-org7e7abfb" class="outline-3">
+<h3 id="org7e7abfb"><span class="section-number-3">3.1</span> <span class="done DONE">DONE</span> Кольцо многочленов F[x] над полем F.</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Теорема: Любое <b>поле</b>, а также любое кольцо с единицей, содержащееся в некотором поле, является <b>областью целостности</b>.
+</p>
+
+<p>
+Обратно, любая область целостности может быть вложена в некоторое поле. Такое вложение дает конструкция поля частных.
+</p>
+
+<p>
+<a href="#org8ffba44">1.1</a>
+</p>
 </div>
-<div id="outline-container-orgc63dfc0" class="outline-3">
-<h3 id="orgc63dfc0"><span class="section-number-3">2.17</span> Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</h3>
 </div>
-<div id="outline-container-org4d9e86c" class="outline-3">
-<h3 id="org4d9e86c"><span class="section-number-3">2.18</span> Ядро и образ линейного отображения. Невырожденные линейные операторы.</h3>
+
+<div id="outline-container-orgaf5b4ae" class="outline-3">
+<h3 id="orgaf5b4ae"><span class="section-number-3">3.2</span> <span class="done DONE">DONE</span> Деление с остатком.</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<a href="https://www.youtube.com/watch?v=WRzIkqV0daQ">Схема Горнера. Объяснение на пальцах. Деление многочленов</a>
+</p>
+
+
+<div id="orgda822ca" class="figure">
+<p><img src="png/3-D-O-o1.png" alt="3-D-O-o1.png" />
+</p>
 </div>
-<div id="outline-container-orgaa00394" class="outline-3">
-<h3 id="orgaa00394"><span class="section-number-3">2.19</span> Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</h3>
 </div>
-<div id="outline-container-org95fad1a" class="outline-3">
-<h3 id="org95fad1a"><span class="section-number-3">2.20</span> Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</h3>
 </div>
-<div id="outline-container-org04e0283" class="outline-3">
-<h3 id="org04e0283"><span class="section-number-3">2.21</span> Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</h3>
+<div id="outline-container-org5034f73" class="outline-3">
+<h3 id="org5034f73"><span class="section-number-3">3.3</span> <span class="done DONE">DONE</span> Наибольший общий делитель многочленов.</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div id="org9f68a1f" class="figure">
+<p><img src="png/3-N-O-D-o1.png" alt="3-N-O-D-o1.png" />
+</p>
 </div>
-<div id="outline-container-orgc771b50" class="outline-3">
-<h3 id="orgc771b50"><span class="section-number-3">2.22</span> Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</h3>
 </div>
+</div>
+</div>
+
+<div id="outline-container-org5875cf1" class="outline-2">
+<h2 id="org5875cf1"><span class="section-number-2">4</span> Алгоритм Евклида. Линейная форма наибольшего общего делителя многочленов.</h2>
+</div>
+<div id="outline-container-orgb79d5fb" class="outline-2">
+<h2 id="orgb79d5fb"><span class="section-number-2">5</span> Взаимно простые многочлены и их свойства. Наименьшее общее кратное многочленов.</h2>
+</div>
+<div id="outline-container-org581b45c" class="outline-2">
+<h2 id="org581b45c"><span class="section-number-2">6</span> Неприводимые многочлены над полем. Теорема о факторизации.</h2>
+</div>
+<div id="outline-container-orgff20362" class="outline-2">
+<h2 id="orgff20362"><span class="section-number-2">7</span> Многочлены над C и R. Основная теорема алгебры многочленов и её следствия. Многочлены над Q. Критерий Эйзенштейна неприводимости многочлена над Q.</h2>
+</div>
+<div id="outline-container-orga956c71" class="outline-2">
+<h2 id="orga956c71"><span class="section-number-2">8</span> Векторное пространство над полем скаляров. Подпространство, характеристический признак подпространства.</h2>
+</div>
+<div id="outline-container-orgd65f26d" class="outline-2">
+<h2 id="orgd65f26d"><span class="section-number-2">9</span> Линейная зависимость векторов. Базис и ранг конечной системы векторов.</h2>
+</div>
+<div id="outline-container-orgc2ddcea" class="outline-2">
+<h2 id="orgc2ddcea"><span class="section-number-2">10</span> Базис векторного пространства. Конечномерные векторные пространства.</h2>
+</div>
+<div id="outline-container-org38c50b7" class="outline-2">
+<h2 id="org38c50b7"><span class="section-number-2">11</span> Координаты вектора в базисе. Матрица перехода от одного базиса к другому. Связь между координатами вектора в разных базисах.</h2>
+</div>
+<div id="outline-container-orgeba28a1" class="outline-2">
+<h2 id="orgeba28a1"><span class="section-number-2">12</span> Линейная оболочка системы векторов. Суммы подпространств.</h2>
+</div>
+<div id="outline-container-org2bd9615" class="outline-2">
+<h2 id="org2bd9615"><span class="section-number-2">13</span> Скалярное произведение в вещественном векторном пространстве. Ортогональные векторы. Линейная независимость ортогональной системы ненулевых векторов.</h2>
+</div>
+<div id="outline-container-orge4bb556" class="outline-2">
+<h2 id="orge4bb556"><span class="section-number-2">14</span> Евклидово пространство. Матрица Грама скалярного произведения в базисе и её изменение при переходе к другому базису.</h2>
+</div>
+<div id="outline-container-org9aaf44d" class="outline-2">
+<h2 id="org9aaf44d"><span class="section-number-2">15</span> Ортогональные и ортонормированные базисы в евклидовом пространстве. Процесс ортогонализации Грамма—Шмидта.</h2>
+</div>
+<div id="outline-container-org7ab65e5" class="outline-2">
+<h2 id="org7ab65e5"><span class="section-number-2">16</span> Длина вектора, угол между векторами, угол между вектором и подпространством, объём параллелепипеда в евклидовом пространстве.</h2>
+</div>
+<div id="outline-container-org8824a55" class="outline-2">
+<h2 id="org8824a55"><span class="section-number-2">17</span> Линейный оператор в векторном пространстве. Матрица линейного оператора в данном базисе и её изменение при переходе к другому базису.</h2>
+</div>
+<div id="outline-container-orgc60b673" class="outline-2">
+<h2 id="orgc60b673"><span class="section-number-2">18</span> Ядро и образ линейного отображения. Невырожденные линейные операторы.</h2>
+</div>
+<div id="outline-container-org63811fb" class="outline-2">
+<h2 id="org63811fb"><span class="section-number-2">19</span> Собственные значения и собственные векторы линейного оператора. Характеристический многочлен линейного оператора.</h2>
+</div>
+<div id="outline-container-orgc69aa03" class="outline-2">
+<h2 id="orgc69aa03"><span class="section-number-2">20</span> Линейная независимость собственных векторов, принадлежащих попарно различным собственным значениям.</h2>
+</div>
+<div id="outline-container-org2b99a79" class="outline-2">
+<h2 id="org2b99a79"><span class="section-number-2">21</span> Диагонализируемые линейные операторы. Теорема о диагонализируемости линейного оператора с простым спектром. Критерий диагонализируемости.</h2>
+</div>
+<div id="outline-container-org2906aec" class="outline-2">
+<h2 id="org2906aec"><span class="section-number-2">22</span> Квадратичные формы. Приведение квадратичной формы к сумме квадратов с коэффициентами методом Лагранжа.</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: q</p>
-<p class="date">Created: 2021-06-27 Sun 16:57</p>
+<p class="date">Created: 2021-06-28 Mon 00:13</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
